@@ -2,19 +2,20 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-=======
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\QuizController;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
->>>>>>> b49f9c21450b5bef8add2d293bbd3988c2b1c152
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/start', function () {
+    return view('start');
+})->name('start');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -27,23 +28,38 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-<<<<<<< HEAD
-=======
+
 Route::get('/home', function () {
-    return view('home');
-});
+    $menu = [
+        ['name' => 'Home', 'url' => '/home'],
+        ['name' => 'Learn', 'url' => '/learn'],
+        ['name' => 'Practice', 'url' => '/practice'],
+    ];
+    return view('home', compact('menu'));
+})->name('home');
 
 Route::get('/learn', function () {
-    return view('learn');
-});
+    $menu = [
+        ['name' => 'Home', 'url' => '/home'],
+        ['name' => 'Learn', 'url' => '/learn'],
+        ['name' => 'Practice', 'url' => '/practice'],
+    ];
+    return view('learn', compact('menu'));
+})->name('learn');
 
 Route::get('/practice', function () {
-    return view('practice');
-});
+    $menu = [
+        ['name' => 'Home', 'url' => '/home'],
+        ['name' => 'Learn', 'url' => '/learn'],
+        ['name' => 'Practice', 'url' => '/practice'],
+    ];
+    return view('practice', compact('menu'));
+})->name('practice');
 
 Route::get('/level', function () {
     return view('level');
 })->name('level');
 
-Route::get('/quiz', [QuizController::class, 'index'])->name('quiz');
->>>>>>> b49f9c21450b5bef8add2d293bbd3988c2b1c152
+
+Route::get('/quiz', [QuizController::class, 'quiz'])->name('quiz');
+
