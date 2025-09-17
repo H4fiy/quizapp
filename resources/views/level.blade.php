@@ -17,8 +17,8 @@
 </head>
 
 <body>
-    <header>
-        <h2 class="">Level Quiz</h2>
+    <header class="flex justify-center items-center">
+        <h2 class="text-4xl font-bold mt-20">Level Quiz</h2>
     </header>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 pt-35 max-w-6xl mx-auto">
         <x-card.level-card level="Newbie" description="Deskripsi singkat." href="{{ route('quiz') }}" />

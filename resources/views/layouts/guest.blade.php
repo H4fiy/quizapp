@@ -14,9 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-<<<<<<< HEAD
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-=======
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -28,7 +25,6 @@
         <!-- Session Status -->
         <div class="w-full max-w-md bg-white shadow-lg rounded-2xl flex items-center justify-center overflow-hidden">
             <div class="w-full h-full scale-[0.85] flex flex-col ">
->>>>>>> b49f9c21450b5bef8add2d293bbd3988c2b1c152
                 {{ $slot }}
             </div>
         </div>

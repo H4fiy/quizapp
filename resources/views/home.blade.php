@@ -41,6 +41,12 @@
         </div>
     </div>
     </div>
+    <x-navigation type="general" :menu="$menu ?? []" :showAuthLinks="true" />
+
+    <!-- Main Content -->
+    <x-card.primary-card class="mt-6 bg-gray-300 ">
+        <x-mascot-text />
+    </x-card.primary-card>
 </body>
 
 </html>

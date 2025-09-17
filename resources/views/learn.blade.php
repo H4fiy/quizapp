@@ -19,6 +19,7 @@
 <body>
     <!-- Navigation Bar -->
     <x-nav-bar />
+    <x-navigation type="general" :menu="$menu ?? []" :showAuthLinks="true" />
     <!-- Main Content -->
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 pt-35 max-w-6xl mx-auto text-center">
