@@ -1,3 +1,4 @@
+
 <?php
 
 use App\Http\Controllers\ProfileController;
@@ -7,6 +8,7 @@ use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\QuizController;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,6 +29,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
 Route::get('/home', function () {
     $menu = [
         ['name' => 'Home', 'url' => '/home'],
@@ -59,6 +62,4 @@ Route::get('/level', function () {
 })->name('level');
 
 
-Route::get('/quiz', [QuizController::class, 'index'])->name('quiz');
 Route::get('/quiz', [QuizController::class, 'quiz'])->name('quiz');
-
